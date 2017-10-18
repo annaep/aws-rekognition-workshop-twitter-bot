@@ -25,7 +25,7 @@ Parameters:
     NoEcho: True
   BotCodeBucket:
     Type: String
-    Default: aws-rekog-twitter-workshop-eu-west-1
+    Default: aws-rekog-twitter-workshop-eu-west-123456789
     Description: "The S3 Bucket where your bot code is hosted. You can use our default lambda bot or replace this with your own code."
   BotCodeKey:
     Type: String
