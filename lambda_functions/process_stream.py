@@ -27,8 +27,8 @@ TWITTER_SN = api.VerifyCredentials().screen_name
 
 MASK = Image.open("mask.png")
 
-POSITIVE_STATUS = "#cloudninja {0}"
-NEGATIVE_STATUS = "@{0} sorry I couldn't figure out how to ninjafy you :(!"
+POSITIVE_STATUS = "#cmbrdge231017{0}"
+NEGATIVE_STATUS = "@{0} sorry I couldn't figure out how to work it out!"
 NSFW_STATUS = "@{0} sorry but that doesn't look SFW (sorry if I'm wrong)"
 
 
@@ -53,7 +53,7 @@ def get_face_boxes(faces, source_size):
     return [
         (
             int(f['BoundingBox']['Left'] * source_size[0]),
-            int(f['BoundingBox']['Top'] * source_size[1]),
+            int((f['BoundingBox']['Top'] - f['BoundingBox']['Height'] * 0.5) * source_size[1]),
             int((f['BoundingBox']['Left'] + f['BoundingBox']['Width']) * source_size[0]),
             int((f['BoundingBox']['Top'] + f['BoundingBox']['Height']) * source_size[1]),
             # we store the final coordinate of the bounding box as the pitch of the face
